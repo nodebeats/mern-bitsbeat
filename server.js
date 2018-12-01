@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 // const route = module.exports= express.Router();
-    
- const parser = require('body-parser');
+
+const parser = require('body-parser');
+
+var configMessage = require("./lib/modules/user/config")
+var expressValidator = require('express-validator');
 
 // winstonHelper = require('./lib/helpers/log.helper');
 // var winston = require('winston');
@@ -17,14 +20,34 @@ require('dotenv').config(`${__dirname}/.env`);
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
-    app.use(parser.urlencoded({ extended: false}));
-    app.use(parser.json());
+app.use(parser.urlencoded({ extended: false }));
+app.use(parser.json());
 
-     dbConnector.init(app);
-     redisConnector.init(app);
-     routeHelper.init(app);
-    logWriter.init(app);
-    //redisCache.init(app);
+dbConnector.init(app);
+redisConnector.init(app);
+routeHelper.init(app);
+logWriter.init(app);
+
+app.use(expressValidator({
+    errorFormatter: function (param, msg, value) {
+      var namespace = param.split('.'),
+        root = namespace.shift(),
+        formParam = root;
+        
+      while (namespace.length) {
+        formParam += '[' + namespace.shift() + ']';
+        
+      }
+      return {
+        param: formParam,
+        msg: msg,
+        value: value
+      };
+      
+    }
+  
+  }));
+//redisCache.init(app);
 
 //  winstonHelper.init(app);
 //console.log('app => ', app.locals.db);
@@ -38,7 +61,7 @@ app.use(parser.urlencoded({ extended: true }));
 
 
 //Morgan and Winston
-   
+
 
 //database connection middleware
 // app.use(function(req, res, next){
