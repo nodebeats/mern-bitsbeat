@@ -4,8 +4,8 @@ const app = express();
 
 const parser = require('body-parser');
 
-var configMessage = require("./lib/modules/user/config")
-var expressValidator = require('express-validator');
+// var configMessage = require("./lib/modules/user/config")
+// var expressValidator = require('express-validator');
 
 // winstonHelper = require('./lib/helpers/log.helper');
 // var winston = require('winston');
@@ -28,25 +28,25 @@ redisConnector.init(app);
 routeHelper.init(app);
 logWriter.init(app);
 
-app.use(expressValidator({
-    errorFormatter: function (param, msg, value) {
-      var namespace = param.split('.'),
-        root = namespace.shift(),
-        formParam = root;
+// app.use(expressValidator({
+//     errorFormatter: function (param, msg, value) {
+//       var namespace = param.split('.'),
+//         root = namespace.shift(),
+//         formParam = root;
         
-      while (namespace.length) {
-        formParam += '[' + namespace.shift() + ']';
+//       while (namespace.length) {
+//         formParam += '[' + namespace.shift() + ']';
         
-      }
-      return {
-        param: formParam,
-        msg: msg,
-        value: value
-      };
+//       }
+//       return {
+//         param: formParam,
+//         msg: msg,
+//         value: value
+//       };
       
-    }
+//     }
   
-  }));
+//   }));
 //redisCache.init(app);
 
 //  winstonHelper.init(app);
