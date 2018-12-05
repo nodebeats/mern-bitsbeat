@@ -14,39 +14,39 @@ const parser = require('body-parser');
 const dbConnector = require('./lib/helpers/db.helper'),
     routeHelper = require('./lib/routes/index'),
     logWriter = require('./lib/helpers/logwriter.helper'),
-    redisConnector = require('./lib/helpers/redis.helper');
+    expressValidator = require('express-validator');
+redisConnector = require('./lib/helpers/redis.helper');
 require('dotenv').config(`${__dirname}/.env`);
-
-app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
 
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
 dbConnector.init(app);
 redisConnector.init(app);
+
+app.use(expressValidator({
+    errorFormatter: function (param, msg, value) {
+        var namespace = param.split('.'),
+            root = namespace.shift(),
+            formParam = root;
+
+        while (namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+
+        }
+        return {
+            param: formParam,
+            msg: msg,
+            value: value
+        };
+
+    }
+
+}));
+
+
 routeHelper.init(app);
 logWriter.init(app);
-
-// app.use(expressValidator({
-//     errorFormatter: function (param, msg, value) {
-//       var namespace = param.split('.'),
-//         root = namespace.shift(),
-//         formParam = root;
-        
-//       while (namespace.length) {
-//         formParam += '[' + namespace.shift() + ']';
-        
-//       }
-//       return {
-//         param: formParam,
-//         msg: msg,
-//         value: value
-//       };
-      
-//     }
-  
-//   }));
 //redisCache.init(app);
 
 //  winstonHelper.init(app);
