@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express(),
-    expressValidator = require("express-validator");
+expressValidator = require("express-validator");
 // const route = module.exports= express.Router();
 
 const parser = require("body-parser");
@@ -9,16 +9,16 @@ const dbConnector = require('./lib/helpers/db.helper'),
     routeHelper = require('./lib/routes/index'),
     logWriter = require('./lib/helpers/logwriter.helper'),
     redisConnector = require('./lib/helpers/redis.helper');
-require('dotenv').config(`${__dirname}/.env`);
 
-app.use(parser.urlencoded({ extended: false }));
-app.use(parser.json());
-dbConnector.init(app);
-redisConnector.init(app);
+    require('dotenv').config(`${__dirname}/.env`);
 
-app.use(
-    expressValidator({
-        errorFormatter: function (param, msg, value) {
+    app.use(parser.urlencoded({ extended: false}));
+    app.use(parser.json());
+    dbConnector.init(app);
+    redisConnector.init(app);
+
+    app.use(
+        expressValidator({errorFormatter: function(param, msg, value) {
             var namespace = param.split("."),
                 root = namespace.shift(),
                 formParam = root;
