@@ -10,7 +10,8 @@ const parser = require("body-parser");
 const dbConnector = require('./lib/helpers/db.helper'),
     routeHelper = require('./lib/routes/index'),
     logWriter = require('./lib/helpers/logwriter.helper'),
-    redisConnector = require('./lib/helpers/redis.helper');
+    redisConnector = require('./lib/helpers/redis.helper'),
+    errorController = require('./lib/modules/errorlogs/index');
 
     require('dotenv').config(`${__dirname}/.env`);
 
