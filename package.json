@@ -17,6 +17,7 @@
     "mongodb": "^3.1.10",
     "morgan": "^1.9.1",
     "node-authorization": "^1.0.6",
+    "nodemailer": "^4.7.0",
     "redis": "^2.8.0",
     "validator": "^10.9.0",
     "winston": "^3.1.0",
