@@ -3,6 +3,8 @@ const app = express(),
 expressValidator = require("express-validator");
 // const route = module.exports= express.Router();
 
+const morgan = require('morgan');
+
 const parser = require("body-parser");
 
 const dbConnector = require('./lib/helpers/db.helper'),
@@ -17,6 +19,7 @@ const dbConnector = require('./lib/helpers/db.helper'),
     app.use(parser.json());
     dbConnector.init(app);
     redisConnector.init(app);
+
 
     app.use(
         expressValidator({errorFormatter: function(param, msg, value) {
@@ -51,10 +54,6 @@ app.get('/', (req, res, next) => {
 })
 
 
-//Error middleware
-app.use(function (err, req, res, next) {
-    errorController.log_error(err, req, res, next);
-})
 
 //Morgan and Winston
 
