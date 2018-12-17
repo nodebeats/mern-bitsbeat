@@ -53,8 +53,6 @@ app.get('/', (req, res, next) => {
     res.send("Hello Again")
 })
 
-
-
 //Morgan and Winston
 
 //database connection middleware
