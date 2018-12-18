@@ -1,5 +1,5 @@
 node_modules/*
-*.info.log
+info.log
 error.log/
-*.Loggerfile.log
+Loggerfile.log
 *.env.env
