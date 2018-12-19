@@ -1,5 +1,10 @@
 node_modules/*
+<<<<<<< HEAD
 info.log
 error.log/
 Loggerfile.log
 *.env.env
+=======
+*.log
+*.env
+>>>>>>> 9ea1fcb8d3de69141e4e679c45b9ba3f5f0433b0
