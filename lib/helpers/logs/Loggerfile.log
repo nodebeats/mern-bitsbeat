@@ -1,0 +1,2 @@
+[2018-12-20T14:53:10+05:45] "GET /api/news/subscribe/get" 404 161 - 4.476 ms
+[2018-12-20T14:54:09+05:45] "GET /api/news/subscribe/get" 404 161 - 0.925 ms
