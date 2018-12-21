@@ -55,17 +55,6 @@ app.use(function (err, req, res, next) {
     errorController.log_error(err, req, res, next);
 })
 
-//Morgan and Winston
-
-//database connection middleware
-// app.use(function(req, res, next){
-//     console.log('Here-----------------');
-//     if (app.locals.db) {
-//         console.log('Here===================');
-//         req.dbCon = app.locals.db;
-//     }
-//     next();
-// })
 
 app.listen(8000, () => {
     console.log("Listening to the port on 8000");
