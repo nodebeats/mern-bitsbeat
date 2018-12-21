@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express(),
-expressValidator = require("express-validator");
+expressValidator = require("express-validator"),
+nodemailer = require("nodemailer");
+//html =require("./index.html");
 // const route = module.exports= express.Router();
 
 const morgan = require('morgan');
