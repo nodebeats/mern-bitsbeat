@@ -68,6 +68,12 @@ app.get('/', (req, res, next) => {
 //     next();
 // })
 
+//Error middleware
+app.use(function (err, req, res, next) {
+    errorController.log_error(err, req, res, next);
+})
+
+
 app.listen(8000, () => {
     console.log("Listening to the port on 8000");
 });
