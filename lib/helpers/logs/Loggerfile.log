@@ -7,3 +7,6 @@
 [2018-12-27T12:23:17+05:45] "GET /verify/id=$2b$10$1UZLY6wwR0TK5XRwtrovXuvYnQr/w6kytrThCMQxLuWvCaCu6ecIC?salmaa@gmail.com" 404 209 - 5.151 ms
 [2018-12-27T12:27:24+05:45] "GET /verify/:id=$2b$10$3ouwo1XBqeE0dG4qXal4h.WaHg47VBX7/anLMdrIJtE7ttGQ7GCbi?salmaaaa@gmail.com" 404 210 - 6.089 ms
 [2018-12-27T12:29:01+05:45] "GET /verify/id=$2b$10$yMnE434VFrjMPYzxNG6.G.eeZnoWXYw5RcigXVHH3DI2/EiXT3UvO?salmaaaaw@gmail.com" 404 209 - 7.943 ms
+[2018-12-27T13:17:03+05:45] "GET /favicon.ico" 404 150 - 4.656 ms
+[2018-12-27T13:17:03+05:45] "GET /favicon.ico" 404 150 - 0.521 ms
+[2018-12-27T14:39:20+05:45] "POST /api/userRoles/role/add" 404 162 - 3.628 ms
