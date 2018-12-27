@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express(),
-expressValidator = require("express-validator");
+expressValidator = require("express-validator"),
+nodemailer = require("nodemailer");
+//html =require("./index.html");
 // const route = module.exports= express.Router();
+
+const morgan = require('morgan');
 
 const parser = require("body-parser");
 
@@ -9,6 +13,7 @@ const dbConnector = require('./lib/helpers/db.helper'),
     routeHelper = require('./lib/routes/index'),
     logWriter = require('./lib/helpers/logwriter.helper'),
     redisConnector = require('./lib/helpers/redis.helper'),
+    path = require('path'),
     errorController = require('./lib/modules/errorlogs/index');
 
     require('dotenv').config(`${__dirname}/.env`);
@@ -18,6 +23,7 @@ const dbConnector = require('./lib/helpers/db.helper'),
     dbConnector.init(app);
     redisConnector.init(app);
 
+    app.use(express.static(path.join(__dirname,'public')));
     app.use(
         expressValidator({errorFormatter: function(param, msg, value) {
             var namespace = param.split("."),
@@ -50,6 +56,17 @@ app.get('/', (req, res, next) => {
     res.send("Hello Again")
 })
 
+//Morgan and Winston
+
+//database connection middleware
+// app.use(function(req, res, next){
+//     console.log('Here-----------------');
+//     if (app.locals.db) {
+//         console.log('Here===================');
+//         req.dbCon = app.locals.db;
+//     }
+//     next();
+// })
 
 //Error middleware
 app.use(function (err, req, res, next) {
