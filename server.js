@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express(),
 expressValidator = require("express-validator"),
-nodemailer = require("nodemailer");
+ cors = require('cors');
 //html =require("./index.html");
 // const route = module.exports= express.Router();
 
-const morgan = require('morgan');
-
+app.use(cors());
 const parser = require("body-parser");
 
 const dbConnector = require('./lib/helpers/db.helper'),
@@ -23,6 +22,7 @@ const dbConnector = require('./lib/helpers/db.helper'),
     dbConnector.init(app);
     redisConnector.init(app);
 
+    
     app.use(express.static(path.join(__dirname,'public')));
     app.use(
         expressValidator({errorFormatter: function(param, msg, value) {
