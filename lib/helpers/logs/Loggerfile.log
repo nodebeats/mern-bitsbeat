@@ -1,9 +1,1 @@
-[2018-12-20T14:53:10+05:45] "GET /api/news/subscribe/get" 404 161 - 4.476 ms
-[2018-12-20T14:54:09+05:45] "GET /api/news/subscribe/get" 404 161 - 0.925 ms
-[2018-12-27T11:46:24+05:45] "GET /favicon.ico" 404 150 - 3.414 ms
-[2018-12-27T12:06:56+05:45] "GET /samia@gmail.com/verify?id=$2b$10$KXKmdLpoHIJzMDRC9xj7qebMRvc4Ri2OZfcguLbPKH2y8XjJsABdG" 404 161 - 5.570 ms
-[2018-12-27T12:07:09+05:45] "GET /samia@gmail.com/verify?id=$2b$10$KXKmdLpoHIJzMDRC9xj7qebMRvc4Ri2OZfcguLbPKH2y8XjJsABdG" 404 161 - 0.842 ms
-[2018-12-27T12:22:36+05:45] "GET /verify/id=$2b$10$T0ic0dh5tBJNzhamRrv2p.wOrU1mEaxlOfo6wCVodRpf07O4Jy1XK/salma@gmail.com" 404 225 - 6.414 ms
-[2018-12-27T12:23:17+05:45] "GET /verify/id=$2b$10$1UZLY6wwR0TK5XRwtrovXuvYnQr/w6kytrThCMQxLuWvCaCu6ecIC?salmaa@gmail.com" 404 209 - 5.151 ms
-[2018-12-27T12:27:24+05:45] "GET /verify/:id=$2b$10$3ouwo1XBqeE0dG4qXal4h.WaHg47VBX7/anLMdrIJtE7ttGQ7GCbi?salmaaaa@gmail.com" 404 210 - 6.089 ms
-[2018-12-27T12:29:01+05:45] "GET /verify/id=$2b$10$yMnE434VFrjMPYzxNG6.G.eeZnoWXYw5RcigXVHH3DI2/EiXT3UvO?salmaaaaw@gmail.com" 404 209 - 7.943 ms
+[2019-01-01T12:57:24+05:45] "GET /favicon.ico" 404 150 - 5.536 ms
