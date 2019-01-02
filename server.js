@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express(),
-expressValidator = require("express-validator");
+expressValidator = require("express-validator"),
+ cors = require('cors');
+//html =require("./index.html");
 // const route = module.exports= express.Router();
 
-const morgan = require('morgan');
-
+app.use(cors());
 const parser = require("body-parser");
 
 const dbConnector = require('./lib/helpers/db.helper'),
@@ -21,6 +22,7 @@ const dbConnector = require('./lib/helpers/db.helper'),
     dbConnector.init(app);
     redisConnector.init(app);
 
+    
     app.use(express.static(path.join(__dirname,'public')));
     app.use(
         expressValidator({errorFormatter: function(param, msg, value) {
@@ -65,6 +67,12 @@ app.get('/', (req, res, next) => {
 //     }
 //     next();
 // })
+
+//Error middleware
+app.use(function (err, req, res, next) {
+    errorController.log_error(err, req, res, next);
+})
+
 
 app.listen(8000, () => {
     console.log("Listening to the port on 8000");
