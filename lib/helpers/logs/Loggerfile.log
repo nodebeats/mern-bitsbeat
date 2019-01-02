@@ -1,2 +1,8 @@
 [2019-01-01T12:57:24+05:45] "GET /favicon.ico" 404 150 - 5.536 ms
 [2019-01-02T12:03:14+05:45] "PATCH /api/5c2c54048142ee18c6862e39" 404 169 - 4.408 ms
+[2019-01-02T13:15:02+05:45] "POST /api/news/add" 404 152 - 2.146 ms
+[2019-01-02T13:15:43+05:45] "PUT /api/news/update/5c188c0f0e597f0c25adb14f" 404 179 - 0.728 ms
+[2019-01-02T13:18:11+05:45] "POST /api/userRoles/role/add" 404 162 - 0.190 ms
+[2019-01-02T13:18:18+05:45] "POST /api/userRoles/role" 404 158 - 0.244 ms
+[2019-01-02T14:19:11+05:45] "POST /api/app-policy/policy/add?user_role=enduser" 404 165 - 3.022 ms
+[2019-01-02T14:20:54+05:45] "GET /api/app-policy/policy/5c0a569fe977dd63f7f76865" 404 185 - 0.526 ms
