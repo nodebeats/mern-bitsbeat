@@ -6,3 +6,4 @@
 [2019-01-02T13:18:18+05:45] "POST /api/userRoles/role" 404 158 - 0.244 ms
 [2019-01-02T14:19:11+05:45] "POST /api/app-policy/policy/add?user_role=enduser" 404 165 - 3.022 ms
 [2019-01-02T14:20:54+05:45] "GET /api/app-policy/policy/5c0a569fe977dd63f7f76865" 404 185 - 0.526 ms
+[2019-01-02T14:43:09+05:45] "POST /api/news/add" 404 152 - 2.834 ms
