@@ -1,0 +1,6 @@
+[2019-01-05T20:46:58+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 4.329 ms
+[2019-01-05T20:47:42+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 4.771 ms
+[2019-01-05T20:47:49+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 1.254 ms
+[2019-01-05T20:47:49+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 0.828 ms
+[2019-01-05T20:47:50+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 0.420 ms
+[2019-01-05T20:47:50+05:45] "PUT /api/blogCategory4a45df09-8f15-41aa-81a6-b4d00659f4e5" 404 191 - 0.505 ms
