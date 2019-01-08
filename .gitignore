@@ -1,3 +1,5 @@
 node_modules/*
+lib/public/images/*
 *.log
+lib/helpers/logs/*
 *.env
