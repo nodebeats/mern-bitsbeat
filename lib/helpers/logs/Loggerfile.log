@@ -2,3 +2,8 @@
 [2018-12-26T14:25:45+05:45] "POST /api/user/" 404 149 - 0.214 ms
 [2018-12-27T16:00:52+05:45] "GET /api/user/subscribe/anonymous" 404 167 - 2.362 ms
 [2018-12-27T16:06:01+05:45] "GET /api/user/unsubscribe/5c23617396994b35d23ec01e" 404 184 - 4.405 ms
+[2019-01-01T13:41:09+05:45] "GET /api/user/unsubscribe/[object%20Object]" 404 177 - 3.218 ms
+[2019-01-01T13:41:42+05:45] "GET /api/user/unsubscribe/5c2b1d2d63fc6f187f3d88e0" 404 184 - 3.706 ms
+[2019-01-01T13:51:23+05:45] "GET /api/user/unsubscribe/5c2b1d2d63fc6f187f3d88e0" 404 184 - 0.639 ms
+[2019-01-01T13:51:40+05:45] "GET /api/user/unsubscribe/5c2b1d2d63fc6f187f3d88e0" 404 184 - 0.482 ms
+[2019-01-01T13:52:27+05:45] "GET /api/user/unsubscribe/5c2b1d2d63fc6f187f3d88e0" 404 184 - 0.457 ms
